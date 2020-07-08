@@ -1,0 +1,7 @@
+{
+  "name": "sanitas_poc",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
