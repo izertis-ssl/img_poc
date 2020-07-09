@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService, Message } from '../services/data.service';
+import { DataService, ItemData } from '../services/data.service';
 
 @Component({
-  selector: 'app-view-message',
-  templateUrl: './view-message.page.html',
-  styleUrls: ['./view-message.page.scss'],
+  selector: 'app-view-article',
+  templateUrl: './view-article.page.html',
+  styleUrls: ['./view-article.page.scss'],
 })
-export class ViewMessagePage implements OnInit {
-  public message: Message;
+export class ViewArticlePage implements OnInit {
+  public article: ItemData;
 
   constructor(
     private data: DataService,
@@ -17,12 +17,12 @@ export class ViewMessagePage implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.message = this.data.getMessageById(parseInt(id, 10));
+    this.article = this.data.getDataById(parseInt(id, 10));
   }
 
   getBackButtonText() {
     const win = window as any;
     const mode = win && win.Ionic && win.Ionic.mode;
-    return mode === 'ios' ? 'Inbox' : '';
+    return mode === 'ios' ? 'Artículos' : '';
   }
 }

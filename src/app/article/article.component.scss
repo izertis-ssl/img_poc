@@ -1,0 +1,40 @@
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-thumbnail{
+  margin-left: 10px;
+}
+
+ion-label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+ion-item h2 {
+  font-size: 15px;
+}
+
+ion-item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  width: 95%;
+  text-overflow: ellipsis; 
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  line-height: 16px; 
+  max-height: 32px; 
+  -webkit-box-orient: vertical
+}
+
+ion-spinner{
+  display: block;
+    height: 3em;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

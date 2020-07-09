@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Inbox
+      Artículos
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,12 +14,18 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">
-        Inbox
+        Artículos
       </ion-title>
     </ion-toolbar>
   </ion-header>
   
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
+  <ion-searchbar id="searcher"
+    [(ngModel)]="searchTerm"
+    (ionChange)="setFilteredItems()"
+  ></ion-searchbar>
+
+  <ion-virtual-scroll [items]="items" approxItemHeight="50px">
+    <app-article *virtualItem="let item" [article]="item"></app-article>
+  </ion-virtual-scroll>
+
 </ion-content>

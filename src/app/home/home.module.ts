@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
-import { MessageComponentModule } from '../message/message.module';
+import { ArticleComponentModule } from '../article/article.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MessageComponentModule,
+    ArticleComponentModule,
     HomePageRoutingModule
   ],
   declarations: [HomePage]

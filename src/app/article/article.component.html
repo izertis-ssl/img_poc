@@ -1,0 +1,15 @@
+<ion-item *ngIf="article" [routerLink]="'/article/' + article.id" [detail]="false" [id]="article.name">
+  <ion-thumbnail slot="start">
+    <ion-img [src]="article.photo" (ionImgWillLoad)="visible=false" (ionImgDidLoad)="visible=true" 
+            (ionError)="onError()" [hidden]="!visible" ></ion-img>
+    <ion-spinner name="lines-small" [hidden]="visible" ></ion-spinner>
+  </ion-thumbnail>
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{article.name}}
+    </h2>
+    <p>
+      {{article.text}}
+    </p>
+  </ion-label>
+</ion-item>
